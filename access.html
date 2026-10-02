@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>唐津くんち｜佐賀・唐津の秋祭り</title>
+
+<meta name="description"
+content="佐賀県唐津市の秋季例大祭「唐津くんち」を紹介するWebサイト。14台の曳山、3日間の祭り、歴史と見どころを紹介します。">
+
+<style>
+:root{
+  --ink:#17211d;
+  --paper:#f6f1e7;
+  --cream:#fffaf0;
+  --red:#a52d24;
+  --gold:#b68a3a;
+  --line:#d8cdb9;
+  --muted:#756d61;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans JP","Yu Gothic",sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:92vh;
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13,22,19,.15),
+      rgba(13,22,19,.86)
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(196,151,61,.35),
+      transparent 28%
+    ),
+    linear-gradient(
+      125deg,
+      #24342d,
+      #111917 55%,
+      #3b211b
+    );
+}
+
+.hero:before{
+  content:"唐津くんち";
+  position:absolute;
+  right:-30px;
+  top:30px;
+
+  font-family:serif;
+  font-size:clamp(90px,17vw,230px);
+  font-weight:900;
+
+  color:rgba(255,255,255,.045);
+
+  writing-mode:vertical-rl;
+  letter-spacing:.08em;
+}
+
+.hero-inner{
+  max-width:1180px;
+  width:100%;
+  margin:auto;
+  padding:80px 28px 72px;
+  color:#fff;
+}
+
+.kicker{
+  letter-spacing:.28em;
+  font-size:.82rem;
+  color:#e5c47b;
+  font-weight:700;
+}
+
+h1{
+  font-family:serif;
+  font-size:clamp(58px,10vw,128px);
+  line-height:.95;
+  margin:18px 0 22px;
+  letter-spacing:.06em;
+}
+
+.hero p{
+  max-width:700px;
+  font-size:1.05rem;
+  color:#eee5d8;
+}
+
+.badges{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.badge{
+  border:1px solid rgba(255,255,255,.35);
+  padding:7px 13px;
+  border-radius:99px;
+  font-size:.82rem;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+
+  background:rgba(255,250,240,.94);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.navin{
+  max-width:1180px;
+  margin:auto;
+  padding:13px 22px;
+
+  display:flex;
+  gap:24px;
+
+  overflow:auto;
+  white-space:nowrap;
+}
+
+nav a{
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:700;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+  max-width:1180px;
+  margin:auto;
+  padding:70px 22px;
+}
+
+section{
+  margin-bottom:110px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.eyebrow{
+  color:var(--red);
+  font-weight:800;
+  letter-spacing:.16em;
+  font-size:.78rem;
+}
+
+h2{
+  font-family:serif;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.15;
+  margin:8px 0 0;
+}
+
+.lead{
+  color:var(--muted);
+  max-width:650px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:28px;
+  border-radius:4px;
+
+  box-shadow:
+    0 8px 30px rgba(42,32,20,.04);
+}
+
+.intro{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:28px;
+}
+
+.big-number{
+  font-family:serif;
+  font-size:72px;
+  line-height:1;
+  color:var(--red);
+  font-weight:900;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.stat{
+  padding:20px;
+  border-top:3px solid var(--gold);
+  background:#efe6d5;
+}
+
+.stat strong{
+  display:block;
+  font-family:serif;
+  font-size:1.45rem;
+}
+
+/* =========================
+   3 DAYS
+========================= */
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.day{
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:26px;
+  position:relative;
+}
+
+.day:before{
+  content:"";
+  display:block;
+
+  width:34px;
+  height:4px;
+
+  background:var(--red);
+
+  margin-bottom:18px;
+}
+
+.day h3{
+  font-family:serif;
+  font-size:28px;
+  margin:0 0 5px;
+}
+
+.day .time{
+  color:var(--red);
+  font-weight:800;
+  font-size:.88rem;
+}
+
+/* =========================
+   YAMA
+========================= */
+
+.yam-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.yam{
+  min-height:150px;
+  padding:20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf0,
+      #eadfca
+    );
+
+  border:1px solid var(--line);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  transition:.25s;
+}
+
+.yam:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.yam span{
+  font-size:.75rem;
+  color:var(--muted);
+}
+
+.yam b{
+  font-family:serif;
+  font-size:1.35rem;
+}
+
+.note{
+  font-size:.86rem;
+  color:var(--muted);
+}
+
+/* =========================
+   HISTORY
+========================= */
+
+.feature{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:stretch;
+}
+
+.feature .visual{
+  min-height:380px;
+
+  background:
+    radial-gradient(
+      circle at 50% 32%,
+      #d2ad62 0 8%,
+      transparent 8.5%
+    ),
+    radial-gradient(
+      circle at 50% 43%,
+      #9e3028 0 19%,
+      transparent 19.5%
+    ),
+    linear-gradient(
+      145deg,
+      #263a31,
+      #111b18
+    );
+
+  position:relative;
+  overflow:hidden;
+}
+
+.visual:after{
+  content:"曳山";
+
+  position:absolute;
+  right:20px;
+  bottom:15px;
+
+  font-family:serif;
+  color:rgba(255,255,255,.13);
+
+  font-size:100px;
+  font-weight:900;
+}
+
+.quote{
+  font-family:serif;
+  font-size:clamp(26px,4vw,45px);
+  line-height:1.45;
+  margin:0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#18221e;
+  color:#f4ead8;
+  padding:45px 22px;
+}
+
+.footerin{
+  max-width:1180px;
+  margin:auto;
+
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+footer a{
+  color:#e4c176;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+  .intro,
+  .feature{
+    grid-template-columns:1fr;
+  }
+
+  .timeline{
+    grid-template-columns:1fr;
+  }
+
+  .yam-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+  <div class="hero-inner">
+
+    <div class="kicker">
+      SAGA · KARATSU / AUTUMN FESTIVAL
+    </div>
+
+    <h1>唐津くんち</h1>
+
+    <p>
+      「エンヤ、エンヤ」「ヨイサ、ヨイサ」の掛け声とともに、
+      14台の豪華な曳山が旧城下町を駆ける。
+      唐津の歴史と人の熱気を感じる、3日間の秋祭り。
+    </p>
+
+    <div class="badges">
+      <span class="badge">
+        毎年 11月2日〜4日
+      </span>
+
+      <span class="badge">
+        唐津神社 秋季例大祭
+      </span>
+
+      <span class="badge">
+        ユネスコ無形文化遺産
+      </span>
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     NAV
+========================= -->
+
+<nav>
+
+  <div class="navin">
+
+    <a href="#about">
+      唐津くんちとは
+    </a>
+
+    <a href="#days">
+      3日間
+    </a>
+
+    <a href="#yama">
+      14台の曳山
+    </a>
+
+    <a href="#history">
+      歴史
+    </a>
+
+    <a href="#guide">
+      観覧のポイント
+    </a>
+
+  </div>
+
+</nav>
+
+
+<main>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="eyebrow">
+        ABOUT
+      </div>
+
+      <h2>
+        唐津の町を、<br>
+        曳山が彩る。
+      </h2>
+
+    </div>
+
+    <p class="lead">
+      唐津くんちは唐津神社の秋季例大祭。
+      笛・鐘・太鼓による三ッ囃子と掛け声に合わせ、
+      14台の曳山が旧城下町を巡行します。
+    </p>
+
+  </div>
+
+
+  <div class="intro">
+
+    <div class="card">
+
+      <p>
+        曳山は獅子、兜、亀、鯛など、
+        それぞれ異なる姿を持つ巨大な工芸品。
+        和紙・漆・金箔などを使った
+        <strong>乾漆造</strong>で、
+        世界最大級の乾漆造の美術工芸品とされています。
+      </p>
+
+
+      <div class="stats">
+
+        <div class="stat">
+          <strong>14台</strong>
+          現存する曳山
+        </div>
+
+        <div class="stat">
+          <strong>3日間</strong>
+          11月2〜4日
+        </div>
+
+        <div class="stat">
+          <strong>2016</strong>
+          ユネスコ登録
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="big-number">
+        01
+      </div>
+
+      <h3>
+        見るなら、まず曳山。
+      </h3>
+
+      <p>
+        祭りの主役は14台の曳山。
+        祭り期間以外も、唐津駅近くの
+        曳山展示場で間近に見ることができます。
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     3 DAYS
+========================= -->
+
+<section id="days">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="eyebrow">
+        3 DAYS
+      </div>
+
+      <h2>
+        3日間、それぞれ違う表情。
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="timeline">
+
+
+    <article class="day">
+
+      <h3>
+        11.02
+      </h3>
+
+      <div class="time">
+        宵曳山 / 19:00〜21:30
+      </div>
+
+      <p>
+        夜の町を提灯に照らされた
+        14台の曳山が巡行。
+        各町から曳山が合流し、
+        唐津神社を目指します。
+      </p>
+
+      <b>
+        夜の幻想的な姿
+      </b>
+
+    </article>
+
+
+    <article class="day">
+
+      <h3>
+        11.03
+      </h3>
+
+      <div class="time">
+        御旅所神幸 / 9:30〜16:30
+      </div>
+
+      <p>
+        神輿のお供をして御旅所・西の浜へ。
+        砂地を進む曳山の「曳込み」は、
+        祭りの大きな見どころです。
+      </p>
+
+      <b>
+        最も迫力ある巡行
+      </b>
+
+    </article>
+
+
+    <article class="day">
+
+      <h3>
+        11.04
+      </h3>
+
+      <div class="time">
+        翌日祭 / 10:00〜16:40
+      </div>
+
+      <p>
+        最終日。
+        町を巡行した曳山は、
+        最後に曳山展示場へ曳き納められ、
+        3日間の祭りを締めくくります。
+      </p>
+
+      <b>
+        祭りのフィナーレ
+      </b>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     14 YAMA
+========================= -->
+
+<section id="yama">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="eyebrow">
+        THE 14 YAMA
+      </div>
+
+      <h2>
+        14台の曳山
+      </h2>
+
+    </div>
+
+    <p class="lead">
+      町ごとに受け継がれてきた、
+      個性豊かな14台。
+    </p>
+
+  </div>
+
+
+  <div class="yam-grid">
+
+
+    <div class="yam">
+      <span>1番・刀町</span>
+      <b>赤獅子</b>
+    </div>
+
+    <div class="yam">
+      <span>2番・木綿町</span>
+      <b>青獅子</b>
+    </div>
+
+    <div class="yam">
+      <span>3番・材木町</span>
+      <b>亀と浦島太郎</b>
+    </div>
+
+    <div class="yam">
+      <span>4番・呉服町</span>
+      <b>源義経の兜</b>
+    </div>
+
+    <div class="yam">
+      <span>5番・魚屋町</span>
+      <b>鯛</b>
+    </div>
+
+    <div class="yam">
+      <span>6番・大石町</span>
+      <b>鳳凰丸</b>
+    </div>
+
+    <div class="yam">
+      <span>7番・新町</span>
+      <b>飛龍</b>
+    </div>
+
+    <div class="yam">
+      <span>8番・本町</span>
+      <b>金獅子</b>
+    </div>
+
+    <div class="yam">
+      <span>9番・木綿町</span>
+      <b>武田信玄の兜</b>
+    </div>
+
+    <div class="yam">
+      <span>10番・平野町</span>
+      <b>上杉謙信の兜</b>
+    </div>
+
+    <div class="yam">
+      <span>11番・米屋町</span>
+      <b>酒呑童子と源頼光の兜</b>
+    </div>
+
+    <div class="yam">
+      <span>12番・京町</span>
+      <b>珠取獅子</b>
+    </div>
+
+    <div class="yam">
+      <span>13番・水主町</span>
+      <b>鯱</b>
+    </div>
+
+    <div class="yam">
+      <span>14番・江川町</span>
+      <b>七宝丸</b>
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     HISTORY
+========================= -->
+
+<section id="history">
+
+  <div class="feature">
+
+
+    <div
+      class="visual"
+      aria-label="曳山をイメージしたビジュアル">
+    </div>
+
+
+    <div class="card">
+
+      <div class="eyebrow">
+        HISTORY
+      </div>
+
+      <h2>
+        江戸から続く、<br>
+        町の記憶。
+      </h2>
+
+      <p>
+        現在の曳山の始まりは、
+        文政2年（1819）に刀町で完成した
+        1番曳山「赤獅子」。
+        その後、明治9年（1876）までに
+        各町で曳山がつくられ、
+        現在の14台が残されています。
+      </p>
+
+      <p class="quote">
+        「祭りを見る」だけでなく、<br>
+        「町が受け継ぐ文化を見る」。
+      </p>
+
+      <p class="note">
+        1980年に「唐津くんちの曳山行事」が
+        国の重要無形民俗文化財に指定。
+        2016年にはユネスコ無形文化遺産に登録されました。
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GUIDE
+========================= -->
+
+<section id="guide">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="eyebrow">
+        GUIDE
+      </div>
+
+      <h2>
+        観覧のポイント
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="intro">
+
+
+    <div class="card">
+
+      <h3>
+        安全に楽しむために
+      </h3>
+
+      <p>
+        巡行中は曳山や綱に近づかず、
+        道路へ入らないようにしましょう。
+        曲がり角では特に注意し、
+        警察官や曳山関係者の案内に従ってください。
+      </p>
+
+      <p>
+        2026年の開催は
+        <strong>11月2日・3日・4日</strong>。
+        会場は唐津神社周辺です。
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        祭り以外でも
+      </h3>
+
+      <p>
+        唐津駅近くの曳山展示場では、
+        14台の曳山を一堂に見ることができます。
+        開館時間は9:00〜17:00、
+        一般310円・小中学生150円・未就学児無料です。
+      </p>
+
+      <p>
+        <a
+          href="https://www.city.karatsu.lg.jp/page/1225.html"
+          target="_blank"
+          rel="noopener">
+          唐津市公式・曳山展示場 →
+        </a>
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footerin">
+
+    <div>
+      <strong>唐津くんち</strong>
+      <br>
+      佐賀県唐津市の秋季例大祭
+    </div>
+
+    <div>
+
+      <a
+        href="https://www.city.karatsu.lg.jp/page/4344.html"
+        target="_blank"
+        rel="noopener">
+        2026年公式開催情報
+      </a>
+
+      <br>
+
+      <a
+        href="https://www.city.karatsu.lg.jp/life/5/32/160/"
+        target="_blank"
+        rel="noopener">
+        唐津市公式・唐津くんち
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
